@@ -4,6 +4,8 @@ The rise of mobile menus gives restaurants an opportunity to simplify and redefi
 
 Content, flow, and story will change drastically from restaurant to restaurant.
 
+Sample accessible at: http://digital-qr-code-menu.s3-website-us-east-1.amazonaws.com
+
 **GIF:**
 
 ![Menu_Scroll](https://user-images.githubusercontent.com/42954670/107122813-9ff8da00-685f-11eb-8c59-894d8a99655b.gif)
