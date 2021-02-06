@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sticky Test</title>
+    <link rel="stylesheet" href="../styles3.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+    </style>
+  </head>
+
+
+  <body>
+
+    <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
+
+      <div id="welcomeDiv">
+        <h1 id="header">FOOD MENU</h1>
+        <div class="container">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+        </div>
+        <p id="scrollInstructions">scroll for menu highlights</p>
+      </div>
+
+      <div id="innerDiv1" >
+
+        <div id="scene" class="largeBox"></div>
+
+          <div id="line1" class="smallBox">sourced from coastal rhode island</div>
+        <div id="fillerBox" class="largeBox"></div>
+
+          <div id="line2" class="smallBox">warm and flaky...the ultimate autumn comfort food</div>
+        <div id="fillerBox" class="largeBox"></div>
+
+          <div id="line3" class="smallBox">a korean-chinese fusion dish</div>
+        <div id="fillerBox" class="largeBox"></div>
+
+          <div id="line4" class="smallBox">keep scrolling for the full menu...if you see something that interests you, tap to select...we'll track your selections and share with you at the end of the menu along with drink pairing suggestions</div>
+          <a id="anchor3"></a>
+        <div id="fillerBox" class="largeBox"></div>
+
+          <div id="line5" class="smallBox">small starters to kick-start your appetite</div>
+          <a id="anchor4"></a>
+        <div id="fillerBox" class="largeBox"></div>
+
+          <div id="line6" class="smallBox">seafood and vegetables</div>
+          <a id="anchor5"></a>
+        <div id="fillerBox" class="largeBox"></div>
+
+          <div id="line7" class="smallBox">hot entrees, meant to share</div>
+          <a id="anchor6"></a>
+        <div id="fillerBox" class="largeBox"></div>
+
+          <div id="line8" class="smallBox">created by pastry chef ____ ____</div>
+        <div id="fillerBox" class="largeBox"></div>
+
+      </div>
+
+      <div id="postScrollSelections" class="largeBox">
+        <h2 class="sectionSubTitleEnd">RETURN TO SECTIONS</h2>
+        <a class="aOptions" href='#anchor3'>
+          <h3 class="h3Options noTopMargin">bites</h3>
+        </a>
+        <a class="aOptions" href='#anchor4'>
+          <h3 class="h3Options">small plates</h3>
+        </a>
+        <a class="aOptions" href='#anchor5'>
+          <h3 class="h3Options">main plates</h3>
+        </a>
+        <a class="aOptions" href='#anchor6'>
+          <h3 class="h3Options">dessert</h3>
+        </a>
+        <p id="scrollInstructionsBottom">your picks below</p>
+      </div>
+
+      <div id="savedAndSuggestions" class="largeBox">
+        <h2 class="sectionSubTitleEnd">YOUR PICKS</h2>
+      </div>
+
+<!-- SCENES -->
+
+<div id="scene1" class="largeBox" style="display:none;">
+    <h2 class="sectionSubTitleBeginning">menu highlights</h2>
+    <img class="specialImage" src="../photos/option3_2.jpg">
+    <div class="menuItem">
+      <h2 class="itemTitle">oysters</h2>
+      <h2 class="itemDescription inline">with mignonette sauce</h2>
+    </div>
+</div>
+
+<div id="scene2" class="largeBox" style="display:none;">
+  <h2 class="sectionSubTitleBeginning">menu highlights</h2>
+  <img class="specialImage blackAndWhite" src="../photos/option3_2.png">
+  <div class="menuItem">
+    <h2 class="itemTitle">leek pancake</h2>
+    <h2 class="itemDescription inline">with chili-ginger dipping sauce</h2>
+  </div>
+</div>
+
+<div id="scene3" class="largeBox" style="display:none;">
+  <h2 class="sectionSubTitleBeginning">menu highlights</h2>
+  <img class="specialImage blackAndWhite" src="../photos/option3_3.png">
+  <div class="menuItem">
+    <h2 class="itemTitle">jjajangmyeon</h2>
+    <h2 class="itemDescription inline">with black bean sauce</h2>
+  </div>
+</div>
+
+<div id="scene4" class="largeBox" style="display:none;">
+  <div id="welcomeDiv">
+    <div id="instructionItems">
+      <div class="instructionItem">
+        <h2 class="itemTitleInstructions inline">menu item</h2>
+        <h2 class="itemDescriptionInstructions inline">description</h2>
+      </div>
+      <div class="instructionItem highlight">
+        <h2 class="itemTitleInstructions inline">menu item</h2>
+        <h2 class="itemDescriptionInstructions inline">description</h2>
+      </div>
+      <div class="instructionItem">
+        <h2 class="itemTitleInstructions inline">menu item</h2>
+        <h2 class="itemDescriptionInstructions inline">description</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+    </div>
+    <p id="scrollInstructions">scroll for full menu</p>
+  </div>
+</div>
+
+<div id="scene5" class="largeBox" style="display:none;">
+  <h2 class="sectionSubTitle">•</h2>
+  <h2 class="sectionSubTitle">bites</h2>
+  <div id="item1" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">pickles</h2>
+    <p class="itemPrice inline">9</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">belvino pinot grigio</p>
+    </div>
+  </div>
+  <div id="item2" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">oysters</h2>
+    <h2 class="itemDescription inline">with mignonette sauce</h2>
+    <p class="itemPrice inline">20</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">conte priola pinot grigio</p>
+    </div>
+  </div>
+  <div id="item3" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">mini lo mein</h2>
+    <h2 class="itemDescription inline">with hoisin sauce</h2>
+    <p class="itemPrice inline">8</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">tesoro della regina pinot grigio</p>
+    </div>
+  </div>
+  <div id="item4" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">gamjajeon</h2>
+    <h2 class="itemDescription inline">potato panckaes</h2>
+    <p class="itemPrice inline">8</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">pacific peak pinot grigio</p>
+    </div>
+  </div>
+  <h2 class="sectionSubTitle">•</h2>
+</div>
+
+<div id="scene6" class="largeBox" style="display:none;">
+  <h2 class="sectionSubTitle">•</h2>
+  <h2 class="sectionSubTitle">cold plates</h2>
+  <div id="item5" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">stir-fried fernbrake</h2>
+    <h2 class="itemDescription inline">with cold dipping sauce</h2>
+    <p class="itemPrice inline">22</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">hitejinro lager</p>
+    </div>
+  </div>
+  <div id="item6" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">spicy cucumber</h2>
+    <h2 class="itemDescription inline">side dish with kimchi garlic sauce</h2>
+    <p class="itemPrice inline">14</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">7brau gangseo hitachino</p>
+    </div>
+  </div>
+  <div id="item7" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">mussels</h2>
+    <h2 class="itemDescription inline">with garlic butter</h2>
+    <p class="itemPrice inline">19</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">energin kimpo lager</p>
+    </div>
+  </div>
+  <div id="item8" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">leek pancake</h2>
+    <h2 class="itemDescription inline">with chili-ginger dipping sauce</h2>
+    <p class="itemPrice inline">23</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">akitu IPA</p>
+    </div>
+  </div>
+  <div id="item9" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">yellowtail</h2>
+    <h2 class="itemDescription inline">with yuzu miso</h2>
+    <p class="itemPrice inline">25</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">pyrus snow lager</p>
+    </div>
+  </div>
+  <h2 class="sectionSubTitle">•</h2>
+</div>
+
+<div id="scene7" class="largeBox" style="display:none;">
+  <h2 class="sectionSubTitle">•</h2>
+  <h2 class="sectionSubTitle">hot plates</h2>
+  <div id="item10" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemDescription inline">smoked</h2>
+    <h2 class="itemTitle inline">pork shoulder</h2>
+    <h2 class="itemDescription inline">with sweet and spicy sauce</h2>
+    <p class="itemPrice inline">24</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">angeline vineyards pinot noir</p>
+    </div>
+  </div>
+  <div id="item11" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">manduguk</h2>
+    <h2 class="itemDescription inline">with soy sauce and garlic</h2>
+    <p class="itemPrice inline">22</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">la crema pinot noir</p>
+    </div>
+  </div>
+  <div id="item12" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">buldak</h2>
+    <h2 class="itemDescription inline">with chili sauce</h2>
+    <p class="itemPrice inline">36</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">dashwood pinot noir</p>
+    </div>
+  </div>
+  <div id="item13" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">tteokbokki</h2>
+    <h2 class="itemDescription inline">with spicy sauce</h2>
+    <p class="itemPrice inline">28</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">stoller family pinot noir</p>
+    </div>
+  </div>
+  <div id="item14" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">galbi</h2>
+    <h2 class="itemDescription inline">with rice cakes</h2>
+    <p class="itemPrice inline">29</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">erath oregon pinot noir</p>
+    </div>
+  </div>
+  <h2 class="sectionSubTitle">•</h2>
+</div>
+
+<div id="scene8" class="largeBox" style="display:none;">
+  <h2 class="sectionSubTitle">•</h2>
+  <h2 class="sectionSubTitle">sweets</h2>
+  <div id="item15" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemDescription inline">yuzu</h2>
+    <h2 class="itemTitle inline">tiramisu</h2>
+    <p class="itemPrice inline">14</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">croft pink port</p>
+    </div>
+  </div>
+  <div id="item16" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemTitle inline">songpyeon</h2>
+    <h2 class="itemDescription inline">with sesame seeds an pine needles</h2>
+    <p class="itemPrice inline">14</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">fonseca reserve port</p>
+    </div>
+  </div>
+  <div id="item17" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemDescription inline">matcha</h2>
+    <h2 class="itemTitle inline">citron</h2>
+    <p class="itemPrice inline">12</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+            <p class="tryItText inline">chartreuse frapé</p>
+    </div>
+  </div>
+  <div id="item18" class="menuItem" onclick="selectMenuItem(this)">
+    <h2 class="itemDescription inline">cocoa</h2>
+    <h2 class="itemTitle inline">moussé</h2>
+    <h2 class="itemDescription inline">with peanut butter miso reduction</h2>
+    <p class="itemPrice inline">11</p>
+    <div class="tryIt" style="display:none">
+          <p class="tryItText inline">try it with the</p>
+          <p class="tryItText inline">tawny port</p>
+    </div>
+  </div>
+  <h2 class="sectionSubTitle">•</h2>
+</div>
+
+  </body>
+
+  <script src="../noframework.waypoints.min.js"></script>
+  <script>
+
+// Scroll Bar
+  window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+// Done Scroll Bar
+
+  let scene = 1;
+  document.getElementById('scene').innerHTML = document.getElementById('scene1').innerHTML
+
+  var waypoint = new Waypoint({
+    element: document.getElementById('line1'),
+    handler: function(direction) {
+      if (scene == 1) {
+        document.getElementById('scene').innerHTML = document.getElementById('scene2').innerHTML
+        scene = 2
+      } else {
+        document.getElementById('scene').innerHTML = document.getElementById('scene1').innerHTML
+        scene = 1
+      }
+    }
+  })
+
+  var waypoint2 = new Waypoint({
+    element: document.getElementById('line2'),
+    handler: function(direction) {
+      if (scene == 2) {
+        document.getElementById('scene').innerHTML = document.getElementById('scene3').innerHTML
+        scene = 3
+      } else {
+        document.getElementById('scene').innerHTML = document.getElementById('scene2').innerHTML
+        scene = 2
+      }
+    }
+  })
+
+  var waypoint3 = new Waypoint({
+    element: document.getElementById('line3'),
+    handler: function(direction) {
+      if (scene == 3) {
+        document.getElementById('scene').innerHTML = document.getElementById('scene4').innerHTML
+        scene = 4
+      } else {
+        document.getElementById('scene').innerHTML = document.getElementById('scene3').innerHTML
+        scene = 3
+      }
+    }
+  })
+
+  var waypoint4 = new Waypoint({
+    element: document.getElementById('line4'),
+    handler: function(direction) {
+      if (scene == 4) {
+        document.getElementById('scene').innerHTML = document.getElementById('scene5').innerHTML
+        scene = 5
+      } else {
+        document.getElementById('scene').innerHTML = document.getElementById('scene4').innerHTML
+        scene = 4
+      }
+    }
+  })
+
+  var waypoint5 = new Waypoint({
+    element: document.getElementById('line5'),
+    handler: function(direction) {
+      if (scene == 5) {
+        document.getElementById('scene').innerHTML = document.getElementById('scene6').innerHTML
+        scene = 6
+      } else {
+        document.getElementById('scene').innerHTML = document.getElementById('scene5').innerHTML
+        scene = 5
+      }
+    }
+  })
+
+  var waypoint5 = new Waypoint({
+    element: document.getElementById('line6'),
+    handler: function(direction) {
+      if (scene == 6) {
+        document.getElementById('scene').innerHTML = document.getElementById('scene7').innerHTML
+        scene = 7
+      } else {
+        document.getElementById('scene').innerHTML = document.getElementById('scene6').innerHTML
+        scene = 6
+      }
+    }
+  })
+
+  var waypoint6 = new Waypoint({
+    element: document.getElementById('line7'),
+    handler: function(direction) {
+      if (scene == 7) {
+        document.getElementById('scene').innerHTML = document.getElementById('scene8').innerHTML
+        scene = 8
+      } else {
+        document.getElementById('scene').innerHTML = document.getElementById('scene7').innerHTML
+        scene = 7
+      }
+    }
+  })
+
+  // Selection JS
+
+  let savedAndSuggestionsBox = document.getElementById('savedAndSuggestions')
+  let items = document.getElementsByClassName('menuItem')
+
+  let idArray = [];
+
+  Array.prototype.forEach.call(items, function(el) {
+      let object = {item: el, selected: 0}
+      idArray.push(object)
+  });
+
+  function selectMenuItem () {
+    let recordDoc = "scene" + scene
+    for (var i=0; i < idArray.length; i++) {
+        if (idArray[i].item.id === event.currentTarget.id) {
+          let suggestionID = idArray[i].item.id + "_"
+            if (idArray[i].selected == 0) {
+              let recordDocString = '#' + idArray[i].item.id
+              document.getElementById(recordDoc).querySelector(recordDocString).style.background = "#02435e45";
+              event.currentTarget.style.background = "#02435e45"
+              idArray[i].selected = 1
+              var suggestionNode = document.createElement("div")
+              suggestionNode.className="savedItem"
+              suggestionNode.id = suggestionID
+              suggestionNode.innerHTML = idArray[i].item.innerHTML
+              suggestionNode.querySelectorAll('.tryIt')[0].style.display="block"
+              savedAndSuggestionsBox.appendChild(suggestionNode)
+            } else {
+              let recordDocString = '#' + idArray[i].item.id
+              document.getElementById(recordDoc).querySelector(recordDocString).style.background = "white";
+              event.currentTarget.style.background = "white"
+              idArray[i].selected = 0
+              document.getElementById(suggestionID).remove()
+            }
+        }
+    }
+
+  }
+
+
+  </script>
+
+</html>
